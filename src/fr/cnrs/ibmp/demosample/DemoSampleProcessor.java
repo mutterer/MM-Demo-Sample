@@ -16,6 +16,7 @@ import ij.gui.Roi;
 import ij.process.ImageProcessor;
 import mmcorej.TaggedImage;
 
+// Modified from NewImageFlipper by Arthur Edelstein and Nico Stuurman
 public class DemoSampleProcessor extends DataProcessor<TaggedImage> {
 
 	String camera_;
@@ -26,7 +27,7 @@ public class DemoSampleProcessor extends DataProcessor<TaggedImage> {
 	/**
 	 * Polls for tagged images, and processes them if they are from the selected
 	 * camera.
-	 * 
+	 *
 	 */
 	@Override
 	public void process() {
@@ -153,7 +154,7 @@ public class DemoSampleProcessor extends DataProcessor<TaggedImage> {
 
 		double exposureFactor = ij.Prefs.get("demosample.exposure", 0.1);
 		if (exposureFactor>0) proc.multiply(exp*exposureFactor);
-		
+
 		double noiseValue = ij.Prefs.get("demosample.noise", 20.0);
 		if (noiseValue>0) proc.noise(noiseValue); // lire plutot d'une pref imagej
 
@@ -164,7 +165,7 @@ public class DemoSampleProcessor extends DataProcessor<TaggedImage> {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		if (type.equals("GRAY8")) {
 			proc = proc.convertToByte(false);
 		}
@@ -174,7 +175,7 @@ public class DemoSampleProcessor extends DataProcessor<TaggedImage> {
 
 	/**
 	 * Update which camera is to be processed.
-	 * 
+	 *
 	 * @param camera
 	 *            - Camera name
 	 */
@@ -184,7 +185,7 @@ public class DemoSampleProcessor extends DataProcessor<TaggedImage> {
 
 	/**
 	 * Update source image.
-	 * 
+	 *
 	 * @param image
 	 */
 	public void setSourceImage(ImagePlus imp) {

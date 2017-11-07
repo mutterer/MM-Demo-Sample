@@ -18,7 +18,7 @@ import mmcorej.TaggedImage;
 
 /**
  *
- * @author arthur
+ Modified from NewImageFlipper by Arthur Edelstein and Nico Stuurman
  */
 @SuppressWarnings("serial")
 public class DemoSampleControls extends MMFrame {
@@ -33,7 +33,7 @@ public class DemoSampleControls extends MMFrame {
 
 	/**
 	 * Creates form DemoSampleControls
-	 * 
+	 *
 	 * @param processor
 	 */
 	public DemoSampleControls(DemoSampleProcessor processor) {
@@ -51,7 +51,7 @@ public class DemoSampleControls extends MMFrame {
 		setBackground(MMStudio.getInstance().getBackgroundColor());
 
 		processor_.setCamera((String) cameraComboBox_.getSelectedItem());
-		
+
 		//ImagePlus imp = IJ.openImage(IJ.getDirectory("imagej") + "sample.tif");
 		// open from jar file, taken from ij jar file demo by Rasband.
 		InputStream is = getClass().getResourceAsStream("sample.tif");
@@ -60,7 +60,7 @@ public class DemoSampleControls extends MMFrame {
             imp = opener.openTiff(is, "DemoSample");
             // if (imp!=null) imp.show();
         }
-        
+
 		processor_.setSourceImage(imp);
 	}
 
@@ -70,7 +70,7 @@ public class DemoSampleControls extends MMFrame {
 
 	/**
 	 * updates the content of the camera selection drop down box
-	 * 
+	 *
 	 * Shows all available cameras and sets the currently selected camera as the
 	 * selected item in the drop down box
 	 */

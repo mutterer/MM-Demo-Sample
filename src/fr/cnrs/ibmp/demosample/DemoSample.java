@@ -2,11 +2,11 @@
 package fr.cnrs.ibmp.demosample;
 
 import org.micromanager.api.MMProcessorPlugin;
-
+// Modified from NewImageFlipper by Arthur Edelstein and Nico Stuurman
 public class DemoSample implements MMProcessorPlugin {
    public static String menuName = "Demo Sample";
    public static String tooltipDescription = "demo sample";
-  
+
    public static Class<?> getProcessorClass() {
       return DemoSampleProcessor.class;
    }
