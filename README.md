@@ -1,0 +1,3 @@
+# MM-Demo-Sample
+
+This is the repository for a Micro-Manager 1.4 On-The-Fly_Processor plugin. This processor is supposed to work with the Demo configuration file, and replace images from the demo camera by portions of a built-in multichannel fluorescence image. It adds some noise to the image, blurs if you defocus, scales the pixel values with exposure, blanks with shutter and moves with the stage (to the max extent of the built-in Image). It has 4 channels, DAPI, FITC, Rhodamine and the MM logo in the Cy5 channel, so you can do MDA, or demonstrate most features of MM. I built this for a MM training.
