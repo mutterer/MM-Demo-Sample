@@ -7,4 +7,6 @@ I'm using a modified version of this image as a demo sample: https://commons.wik
 This image is from the National Institutes of Health (NIH). I hope it's OK to use it, but I'm happy to replace it, would someone be wanting to provide a nice 3 channels image of something like 2048x2048.
 
 # Installation
-In a fresh installation of MM1.4, put the jar file inside mmplugins/On-The-Fly_Processors
+ * In a fresh installation of MM1.4, put the jar file inside mmplugins/On-The-Fly_Processors
+ * To activate Demo Sample, go to MM>Plugins>On-The-Fly Processors>Configure Processors... to open the image processing pipeline dialog. In this dialog, press the (+ Add...) button, choose the Demo Sample plugin. It is added to the pipeline. You'll need to press the (Configure...) button in the Settings column to activate Demo Sample. Now start the Live view.
+
